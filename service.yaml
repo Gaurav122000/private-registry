@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: myplugin-service
   namespace: portal
 spec:
   selector:
-    app: nginx
+    app: myplugin
   ports:
     - protocol: TCP
       port: 80
