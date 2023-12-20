@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: myplugin-deployment
   namespace: portal
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: myplugin
   template:
     metadata:
       labels:
-        app: nginx
+        app: myplugin
     spec:
       containers:
-      - name: nginx
-        image: gaurav122000/myplugin  
+      - name: myplugin-container1
+        image: gaurav122000/myplugin:0.1  
         ports:
         - containerPort: 80
